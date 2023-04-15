@@ -6,6 +6,7 @@ const Statistics = () => {
     const data = useLoaderData();
     return (
         <div className='w-3/4 mt-10'>
+            <h2 className='text-2xl text-center font-bold my-10'>Statistics</h2>
             <BarChart width={600} height={300} data={data.data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
