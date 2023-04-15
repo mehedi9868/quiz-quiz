@@ -8,6 +8,7 @@ import Home from './components/Home'
 import Statistics from './components/Statistics'
 import Blog from './components/Blog'
 import Quiz from './components/Quiz'
+import NotFoundPage from './components/NotFoundPage'
 
 const router = createBrowserRouter([
   {
@@ -30,10 +31,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog",
-        element: <Blog></Blog>
+        element: <Blog></Blog>,
       }
-    ]
-  }
+    ],
+  },
+  {
+    path: "*",
+    element: <NotFoundPage></NotFoundPage>,
+  },
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
